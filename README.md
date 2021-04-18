@@ -1,4 +1,4 @@
-# eslint-plugin-better-dates [![npm version](https://img.shields.io/npm/v/@typescript-eslint/eslint-plugin.svg)](https://www.npmjs.com/package/@typescript-eslint/eslint-plugin)
+# eslint-plugin-better-dates [![npm version](https://img.shields.io/npm/v/eslint-plugin-better-dates.svg)](https://www.npmjs.com/package/eslint-plugin-better-dates)
 
 > An ESlint plugin to prevent `Date`-related bugs.
 
