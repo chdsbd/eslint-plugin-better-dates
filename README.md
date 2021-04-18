@@ -20,11 +20,12 @@ $ npm i --save-dev eslint-plugin-better-dates
 
 ## Usage
 
-Add `@typescript-eslint/parser` to the `parser` field and `better-dates` to the plugins section of your `.eslintrc` configuration file, then configure the rules you want to use under the rules section.
+Add `@typescript-eslint/parser` to the `parser` field, your `tsconfig.json` relative path to `parserOptions.project`, and `better-dates` to the plugins section of your `.eslintrc` configuration file, then configure the rules you want to use under the rules section.
 
 ```json
 {
   "parser": "@typescript-eslint/parser",
+  "parserOptions": { "project": "./tsconfig.json" },
   "plugins": ["better-dates"],
   "rules": {
     "better-dates/ban-mutation": "error"
@@ -38,8 +39,8 @@ Add `@typescript-eslint/parser` to the `parser` field and `better-dates` to the 
 
 **Key**: :wrench: = fixable, :thought_balloon: = requires type information
 
-| Name                                                     | Description                                               | :wrench: | :thought_balloon: |
-| -------------------------------------------------------- | --------------------------------------------------------- | -------- | ----------------- |
-| [`ban-date-mutation`](./docs/rules/ban-date-mutation.md) | Bans calling methods on `Date` that will mutate the date. |          | :thought_balloon: |
+| Name                                                                  | Description                                               | :wrench: | :thought_balloon: |
+| --------------------------------------------------------------------- | --------------------------------------------------------- | -------- | ----------------- |
+| [`better-dates/ban-date-mutation`](./docs/rules/ban-date-mutation.md) | Bans calling methods on `Date` that will mutate the date. |          | :thought_balloon: |
 
 > Project layout and configuration modified from [`typescript-eslint/eslint-plugin`](https://github.com/typescript-eslint/typescript-eslint/tree/26d71b57fbff013b9c9434c96e2ba98c6c541259/packages/eslint-plugin).
