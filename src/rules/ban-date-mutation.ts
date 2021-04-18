@@ -3,25 +3,6 @@ import * as util from '../util'
 
 export type MessageIds = 'banDateMutation'
 
-const disallowedDateMethods = new Set([
-  'setDate',
-  'setFullYear',
-  'setHours',
-  'setMilliseconds',
-  'setMinutes',
-  'setMonth',
-  'setSeconds',
-  'setTime',
-  'setUTCDate',
-  'setUTCFullYear',
-  'setUTCHours',
-  'setUTCMilliseconds',
-  'setUTCMinutes',
-  'setUTCMonth',
-  'setUTCSeconds',
-  'setYear',
-])
-
 const methodToDateFns: Record<string, string | null> = {
   setDate: 'setDate',
   setFullYear: '{setYear,setMonth,setDate}',
@@ -95,7 +76,7 @@ export default util.createRule<[], MessageIds>({
             return
           }
           const dateMethodString = dateMethod.toString()
-          if (disallowedDateMethods.has(dateMethodString)) {
+          if (dateMethodString in methodToDateFns) {
             context.report({
               node,
               data: {
