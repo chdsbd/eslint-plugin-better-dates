@@ -28,7 +28,7 @@ Add `@typescript-eslint/parser` to the `parser` field, your `tsconfig.json` rela
   "parserOptions": { "project": "./tsconfig.json" },
   "plugins": ["better-dates"],
   "rules": {
-    "better-dates/ban-mutation": "error"
+    "better-dates/ban-date-mutation": "error"
   }
 }
 ```
