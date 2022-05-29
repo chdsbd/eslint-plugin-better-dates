@@ -27,7 +27,7 @@ ruleTester.run('ban-date-mutation', rule, {
         }
       }
       const foo = new Date();
-      foo.getSeconds();
+      foo.setSeconds(123);
     `,
     },
   ],
